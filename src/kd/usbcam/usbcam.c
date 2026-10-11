@@ -691,6 +691,8 @@ _Static_assert(__builtin_offsetof(struct VideoState, desc) == 0x130, "VideoState
 _Static_assert(__builtin_offsetof(struct VideoState, workBase) == 0x150, "VideoState.workBase");
 _Static_assert(__builtin_offsetof(struct VideoState, workHalf) == 0x154, "VideoState.workHalf");
 _Static_assert(__builtin_offsetof(struct VideoState, slot) == 0x158, "VideoState.slot");
+_Static_assert(sizeof(((struct VideoState *)0)->slot[0]) == 8, "VideoState.slot[0]");
+_Static_assert(__builtin_offsetof(struct VideoState, slot[1]) == 0x160, "VideoState.slot[1]");
 _Static_assert(__builtin_offsetof(struct VideoState, frameSeq) == 0x168, "VideoState.frameSeq");
 _Static_assert(__builtin_offsetof(struct VideoState, fragHdr) == 0x16C, "VideoState.fragHdr");
 _Static_assert(__builtin_offsetof(struct VideoState, fragTotal) == 0x170, "VideoState.fragTotal");
